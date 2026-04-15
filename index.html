@@ -189,6 +189,7 @@
   }
 
   .q-hint { font-size:14px; color:var(--grey); margin-bottom:24px; font-weight:400; line-height:1.5; }
+  .q-img { width:180px; border-radius:10px; margin-bottom:20px; display:block; }
 
   /* Radio / Checkbox options */
   .opts { display:flex; flex-direction:column; gap:9px; margin-bottom: 12px; }
@@ -578,9 +579,10 @@ const DATA = {
         ]
       },
       {
-        en: "Which English name best describes '車輪餅' to someone who's never had one?",
+        en: "Which English name best describes this dessert to someone who's never had one?",
         zh: "哪個英文名稱最能讓沒吃過車輪餅的人一看就懂？",
         hint: "A round, crispy cake filled with custard, red bean, or other flavors — a classic Taiwanese street snack.\n一種圓形、外酥內軟、現做現填餡的台灣經典小吃。",
+        img: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTx__BMTGXdTiq_sF-UxvLjVezPFuIhtiCovQ&s',
         type: 'radio',
         opts: [
           "Wheel Pie（目前使用）",
@@ -779,6 +781,7 @@ const DATA = {
       {
         en: "A 'Taiwanese Wheel Cake' is a round, crispy cake freshly filled with custard, red bean, or other flavors. How clear is that concept?",
         zh: "「台灣車輪餅」是圓形、外酥內軟、現做現填餡的甜點。你覺得好理解嗎？",
+        img: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTx__BMTGXdTiq_sF-UxvLjVezPFuIhtiCovQ&s',
         type: 'radio',
         opts: [
           "Crystal clear — I'd know what I'm ordering / 完全清楚——我知道在點什麼",
@@ -815,6 +818,7 @@ const DATA = {
         en: "How would you describe a Wheel Cake to a friend who's never had one?",
         zh: "你會怎麼用一句話向沒吃過的朋友介紹車輪餅？",
         hint: "There's no wrong answer — we want your natural words. / 沒有標準答案——我們想聽你最自然的說法。",
+        img: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTx__BMTGXdTiq_sF-UxvLjVezPFuIhtiCovQ&s',
         type: 'text',
         placeholder: "e.g. \"It's like a crispy stuffed pancake\""
       },
@@ -1008,6 +1012,13 @@ function render() {
     wrap.appendChild(el('p', 'q-hint', q.hint));
   } else {
     wrap.appendChild(el('div', '', '')).style.marginBottom = '20px';
+  }
+
+  if (q.img) {
+    const img = document.createElement('img');
+    img.src = q.img; img.alt = 'Wheel Cake / 車輪餅';
+    img.className = 'q-img';
+    wrap.appendChild(img);
   }
 
   // Inputs
