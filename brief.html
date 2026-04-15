@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Alpaca Cafe Rebrand Survey — 問卷邏輯</title>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root { --black:#1a1a1a; --grey:#4a4a4a; --mid:#666; --light:#f7f7f7; --border:#e0e0e0; --white:#fff; }
+  * { margin:0; padding:0; box-sizing:border-box; }
+  body { font-family:'DM Sans',sans-serif; color:var(--black); background:var(--white); line-height:1.7; -webkit-font-smoothing:antialiased; }
+  .wrap { max-width:760px; margin:0 auto; padding:60px 32px; }
+  .tag { font-size:11px; font-weight:600; letter-spacing:2px; text-transform:uppercase; color:var(--mid); margin-bottom:12px; }
+  h1 { font-size:28px; font-weight:700; line-height:1.3; margin-bottom:40px; }
+  h2 { font-size:18px; font-weight:700; margin:40px 0 16px; padding-top:32px; border-top:1px solid var(--border); }
+
+  /* Strategy */
+  .strat { display:grid; grid-template-columns:1fr 1fr 1fr; gap:12px; margin-bottom:8px; }
+  .strat-card { background:var(--light); border-radius:10px; padding:20px; }
+  .strat-card .label { font-size:11px; font-weight:600; letter-spacing:1.5px; text-transform:uppercase; color:var(--mid); }
+  .strat-card .val { font-size:17px; font-weight:700; margin-top:4px; }
+
+  /* Groups */
+  .groups { display:grid; grid-template-columns:1fr 1fr; gap:12px; }
+  .gc { border:1px solid var(--border); border-radius:10px; padding:20px; }
+  .gc h3 { font-size:15px; font-weight:600; }
+  .gc .sub { font-size:12px; color:var(--mid); margin-top:2px; }
+  .gc .desc { font-size:13px; color:var(--grey); margin-top:8px; }
+
+  /* Tables */
+  table { width:100%; border-collapse:collapse; margin-bottom:8px; table-layout:fixed; }
+  th { text-align:left; font-size:11px; font-weight:600; letter-spacing:1px; text-transform:uppercase; color:var(--mid); padding:8px 10px; border-bottom:2px solid var(--black); }
+  td { font-size:13px; padding:10px; border-bottom:1px solid var(--border); vertical-align:top; }
+  .n { width:28px; text-align:center; font-weight:600; color:var(--mid); }
+  .ins { color:var(--grey); }
+  col.c-n { width:36px; } col.c-q { width:auto; } col.c-i { width:40%; }
+  .tt { display:inline-block; padding:1px 6px; border-radius:4px; font-size:11px; background:var(--light); border:1px solid var(--border); }
+
+  /* Decision matrix */
+  .dec { font-weight:600; }
+
+  /* Flow */
+  .flow { display:flex; align-items:center; gap:10px; flex-wrap:wrap; margin:16px 0; }
+  .fs { background:var(--light); border-radius:8px; padding:10px 16px; font-size:13px; font-weight:500; }
+  .fa { color:var(--mid); }
+
+  .footer { margin-top:40px; padding-top:24px; border-top:1px solid var(--border); font-size:12px; color:var(--mid); text-align:center; }
+  .footer a { color:var(--black); text-decoration:none; font-weight:500; }
+  @media(max-width:600px) { .wrap{padding:40px 20px;} .strat,.groups{grid-template-columns:1fr;} h1{font-size:24px;} }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+<div class="tag">Alpaca Cafe Rebrand Phase 1</div>
+<h1>問卷邏輯說明</h1>
+
+<!-- GOAL -->
+<div class="strat">
+  <div class="strat-card"><div class="label">防守</div><div class="val">維持熟客</div></div>
+  <div class="strat-card"><div class="label">進攻</div><div class="val">獲取新客</div></div>
+  <div class="strat-card"><div class="label">定調</div><div class="val">了解核心團隊想法</div></div>
+</div>
+
+<!-- SAMPLE -->
+<h2>樣本目標</h2>
+<table>
+  <colgroup><col style="width:25%"><col style="width:20%"><col style="width:55%"></colgroup>
+  <thead><tr><th>組別</th><th>目標</th><th>收集方式</th></tr></thead>
+  <tbody>
+    <tr><td>熟客</td><td>10+</td><td>IG 限動 + 私訊老顧客</td></tr>
+    <tr><td>潛在客戶</td><td>10+</td><td>IG 貼文 + 朋友圈轉發</td></tr>
+    <tr><td>陌生人</td><td>10+</td><td>Pop-up 現場 QR Code + 轉發非亞裔朋友</td></tr>
+  </tbody>
+</table>
+
+<!-- Q DETAIL -->
+<h2>題目與意圖</h2>
+
+<h3 style="font-size:15px;font-weight:600;margin:24px 0 8px;">熟客</h3>
+<table>
+  <colgroup><col class="c-n"><col class="c-q"><col class="c-i"></colgroup>
+  <thead><tr><th>#</th><th>題目</th><th>要回答</th></tr></thead>
+  <tbody>
+    <tr><td class="n">1</td><td>品牌聯想詞 <span class="tt">複選3</span></td><td class="ins">品牌感知地圖</td></tr>
+    <tr><td class="n">2</td><td>來這裡的真正原因</td><td class="ins">情感 vs 功能價值比重</td></tr>
+    <tr><td class="n">3</td><td>消失了去哪找替代</td><td class="ins">競爭位置與分類</td></tr>
+    <tr><td class="n">4</td><td>最重要的升級 <span class="tt">複選2</span></td><td class="ins">資源分配優先序</td></tr>
+    <tr><td class="n">5</td><td>視覺升級的直覺</td><td class="ins">升級的情緒風險</td></tr>
+    <tr><td class="n">6</td><td>外人猜名字賣什麼</td><td class="ins">名稱溝通力</td></tr>
+    <tr><td class="n">7</td><td>車輪餅最佳英文名</td><td class="ins">產品命名策略</td></tr>
+    <tr><td class="n">8</td><td>精緻化 +10-20%，還來嗎</td><td class="ins">價格彈性上限</td></tr>
+  </tbody>
+</table>
+
+<h3 style="font-size:15px;font-weight:600;margin:24px 0 8px;">潛在客戶</h3>
+<table>
+  <colgroup><col class="c-n"><col class="c-q"><col class="c-i"></colgroup>
+  <thead><tr><th>#</th><th>題目</th><th>要回答</th></tr></thead>
+  <tbody>
+    <tr><td class="n">1</td><td>品牌聯想詞 <span class="tt">複選3</span></td><td class="ins">感知 vs 熟客差異</td></tr>
+    <tr><td class="n">2</td><td>沒來過的主因</td><td class="ins">最大阻礙</td></tr>
+    <tr><td class="n">3</td><td>什麼視覺讓你想進去</td><td class="ins">視覺風格方向</td></tr>
+    <tr><td class="n">4</td><td>什麼條件會拍照分享</td><td class="ins">社群擴散觸發點</td></tr>
+    <tr><td class="n">5</td><td>名字猜賣什麼</td><td class="ins">名稱第一印象</td></tr>
+    <tr><td class="n">6</td><td>「台灣品牌」的影響</td><td class="ins">台灣身份是加分或限制</td></tr>
+    <tr><td class="n">7</td><td>怎麼知道 Alpaca Cafe</td><td class="ins">獲客管道</td></tr>
+    <tr><td class="n">8</td><td>哪句標語最想進店</td><td class="ins">品牌語調方向</td></tr>
+    <tr><td class="n">9</td><td>精緻化 +10-20%，會試嗎</td><td class="ins">新客價格接受度</td></tr>
+  </tbody>
+</table>
+
+<h3 style="font-size:15px;font-weight:600;margin:24px 0 8px;">陌生人</h3>
+<table>
+  <colgroup><col class="c-n"><col class="c-q"><col class="c-i"></colgroup>
+  <thead><tr><th>#</th><th>題目</th><th>要回答</th></tr></thead>
+  <tbody>
+    <tr><td class="n">1</td><td>品牌聯想詞 <span class="tt">複選3</span></td><td class="ins">零接觸印象基準</td></tr>
+    <tr><td class="n">2</td><td>猜賣什麼</td><td class="ins">名稱自帶聯想</td></tr>
+    <tr><td class="n">3</td><td>哪句標語最想進去</td><td class="ins">語調對陌生人的拉力</td></tr>
+    <tr><td class="n">4</td><td>車輪餅概念清楚嗎</td><td class="ins">產品認知門檻</td></tr>
+    <tr><td class="n">5</td><td>什麼視覺讓你想進去</td><td class="ins">陌生人視覺偏好</td></tr>
+    <tr><td class="n">6</td><td>「台灣品牌」的影響</td><td class="ins">非既有客群的反應</td></tr>
+    <tr><td class="n">7</td><td>一句話介紹車輪餅 <span class="tt">開放題</span></td><td class="ins">真實口碑語言 / 類比錨點</td></tr>
+    <tr><td class="n">8</td><td>什麼讓你第一次試亞洲食物</td><td class="ins">跨文化嘗試的觸發管道</td></tr>
+    <tr><td class="n">9</td><td>哪個描述最想嘗試</td><td class="ins">產品描述策略：正名 / 工藝 / 感官 / 社會證明</td></tr>
+  </tbody>
+</table>
+
+<h3 style="font-size:15px;font-weight:600;margin:24px 0 8px;">核心團隊</h3>
+<table>
+  <colgroup><col class="c-n"><col class="c-q"><col class="c-i"></colgroup>
+  <thead><tr><th>#</th><th>題目</th><th>要回答</th></tr></thead>
+  <tbody>
+    <tr><td class="n">1</td><td>品牌聯想詞 <span class="tt">複選3</span></td><td class="ins">內外感知是否對齊</td></tr>
+    <tr><td class="n">2</td><td>品牌 Hero <span class="tt">複選2</span></td><td class="ins">產品定位共識</td></tr>
+    <tr><td class="n">3</td><td>不能動的 DNA <span class="tt">複選2</span></td><td class="ins">設計紅線</td></tr>
+    <tr><td class="n">4</td><td>最希望解決的痛點</td><td class="ins">設計資源優先級</td></tr>
+    <tr><td class="n">5</td><td>砍掉一個讓品牌聚焦</td><td class="ins">減法空間</td></tr>
+    <tr><td class="n">6</td><td>三年後 LA Times 標題</td><td class="ins">品牌願景語言</td></tr>
+    <tr><td class="n">7</td><td>為哪種顧客而生 <span class="tt">複選2</span></td><td class="ins">目標客群共識</td></tr>
+  </tbody>
+</table>
+
+<!-- DECISION MATRIX -->
+<h2>資料能回答的決策</h2>
+<table>
+  <colgroup><col style="width:60%"><col style="width:40%"></colgroup>
+  <thead><tr><th>決策</th><th>資料來源</th></tr></thead>
+  <tbody>
+    <tr><td class="dec">品牌在人心中是什麼</td><td>4 組 Q1 聯想詞交叉比對</td></tr>
+    <tr><td class="dec">視覺風格方向</td><td>潛在 Q3 + 陌生人 Q5</td></tr>
+    <tr><td class="dec">核心產品定位</td><td>Core Team Q2 + 熟客 Q3</td></tr>
+    <tr><td class="dec">升級能走多遠</td><td>熟客 Q5 + Q8 + Core Team Q3</td></tr>
+    <tr><td class="dec">名稱溝通力</td><td>3 組「猜賣什麼」+ 熟客 Q6</td></tr>
+    <tr><td class="dec">台灣身份怎麼用</td><td>潛在 Q6 + 陌生人 Q6</td></tr>
+    <tr><td class="dec">車輪餅怎麼說</td><td>陌生人 Q4 + Q7 + 熟客 Q7</td></tr>
+    <tr><td class="dec">新客進入障礙</td><td>潛在 Q2 + Q7</td></tr>
+    <tr><td class="dec">品牌語調</td><td>潛在 Q8 + 陌生人 Q3</td></tr>
+    <tr><td class="dec">設計紅線</td><td>Core Team Q3 + Q5</td></tr>
+  </tbody>
+</table>
+
+<div class="footer">
+  Alpaca Cafe Rebrand Phase 1 &mdash; <a href="https://baizhoudesign.github.io/cool-alpaca-survey/">前往問卷</a>
+</div>
+
+</div>
+</body>
+</html>
