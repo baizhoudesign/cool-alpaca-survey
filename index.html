@@ -1215,9 +1215,9 @@ async function submitData() {
         navBtn.disabled = true;
 
         if (GOOGLE_SCRIPT_URL) {
-            // GAS Web App — 用 GET + query string（跨域最可靠）
+            // GAS Web App — fire-and-forget（不等回應，GAS 處理慢會卡住頁面）
             const url = GOOGLE_SCRIPT_URL + '?payload=' + encodeURIComponent(JSON.stringify(payload));
-            await fetch(url, { mode: 'no-cors' });
+            fetch(url, { mode: 'no-cors' }).catch(() => {});
             show('thankyou');
         } else {
             // Fallback: FormSubmit（寄 email）
