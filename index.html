@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Cool Alpaca — Brand Survey</title>
+<title>Alpaca Cafe — Brand Survey</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600&display=swap" rel="stylesheet">
 <style>
@@ -406,10 +406,10 @@
 <!-- LANDING -->
 <div id="landing" class="screen active">
   <div class="logo-mark">🦙</div>
-  <p class="eyebrow">Cool Alpaca &times; Brand Research</p>
+  <p class="eyebrow">Alpaca Cafe &times; Brand Research</p>
   <h1 class="landing-h1">We&rsquo;d love to<br>hear from <em>you</em></h1>
   <p class="landing-sub">
-    We're reimagining Cool Alpaca and your honest perspective matters more than you know.
+    We're reimagining Alpaca Cafe and your honest perspective matters more than you know.
     Takes 3&ndash;4 minutes. Completely anonymous.<br><br>
     <span style="font-size:12px;">我們正在進行品牌研究，你的真實想法是最重要的素材。大約需要3-4分鐘。</span>
   </p>
@@ -434,7 +434,7 @@
       <span class="g-icon">👋</span>
       <div>
         <div class="g-title">First Time Hearing This / 第一次聽到</div>
-        <div class="g-sub">You've never heard of Cool Alpaca — fresh eyes welcome</div>
+        <div class="g-sub">You've never heard of Alpaca Cafe — fresh eyes welcome</div>
       </div>
     </button>
     <button class="g-card" onclick="pick('founder', this)">
@@ -471,9 +471,9 @@
   <div class="ty-icon">🦙</div>
   <h2 class="ty-h">Thank you!</h2>
   <p class="ty-p">
-    Your perspective helps shape the next chapter of Cool Alpaca.<br>
+    Your perspective helps shape the next chapter of Alpaca Cafe.<br>
     We read every response — seriously.<br><br>
-    <span style="font-size:12px;">謝謝你。你的回饋讓 Cool Alpaca 的下一章更真實。</span>
+    <span style="font-size:12px;">謝謝你。你的回饋讓 Alpaca Cafe 的下一章更真實。</span>
   </p>
   <a href="https://www.instagram.com/alpacacafela/" target="_blank" class="ty-ig" style="text-decoration:none;color:inherit;">@alpacacafela</a><br>
   <button class="ty-again" onclick="restart()">Fill out another →</button>
@@ -493,11 +493,11 @@ const DATA = {
   loyal: {
     eye: 'For Regulars / 熟客問卷',
     title: 'You were there.',
-    sub:   "Your memories of Cool Alpaca are our most honest research material.\n你對 Cool Alpaca 的記憶，是我們最真實的研究素材。",
+    sub:   "Your memories of Alpaca Cafe are our most honest research material.\n你對 Alpaca Cafe 的記憶，是我們最真實的研究素材。",
     qs: [
       {
-        en: "When you hear 'Cool Alpaca', which 3 words come to mind first?",
-        zh: "聽到「Cool Alpaca」，你腦中最先浮現哪 3 個詞？",
+        en: "When you hear 'Alpaca Cafe', which 3 words come to mind first?",
+        zh: "聽到「Alpaca Cafe」，你腦中最先浮現哪 3 個詞？",
         type: 'checkbox',
         maxOptions: 3,
         opts: [
@@ -527,8 +527,8 @@ const DATA = {
         ]
       },
       {
-        en: "If Cool Alpaca completely disappeared — where would you go for a replacement?",
-        zh: "如果 Cool Alpaca 消失了，你會去哪裡尋找替代？",
+        en: "If Alpaca Cafe completely disappeared — where would you go for a replacement?",
+        zh: "如果 Alpaca Cafe 消失了，你會去哪裡尋找替代？",
         type: 'radio',
         opts: [
           "Boba chains (Tiger Sugar, Gong Cha) for the drinks / 手搖飲連鎖店",
@@ -553,8 +553,8 @@ const DATA = {
         ]
       },
       {
-        en: "If Cool Alpaca changed its entire visual identity to be more high-end — gut reaction?",
-        zh: "如果我們把整個視覺升級，變得更有「高級感」，你的第一直覺是？",
+        en: "If the brand's look and feel were refreshed and elevated — what's your gut reaction?",
+        zh: "如果品牌的外觀和感覺被更新升級——你的第一直覺是？",
         type: 'radio',
         opts: [
           "Excited! The brand deserves a premium look. / 期待！品牌值得更精緻的面貌",
@@ -565,8 +565,8 @@ const DATA = {
         ]
       },
       {
-        en: "If someone who's never heard of Cool Alpaca sees the name — what would they guess it sells?",
-        zh: "從沒聽過的人看到 Cool Alpaca 這個名字，你猜他會以為是賣什麼的？",
+        en: "If someone who's never heard of Alpaca Cafe sees the name — what would they guess it sells?",
+        zh: "從沒聽過的人看到 Alpaca Cafe 這個名字，你猜他會以為是賣什麼的？",
         type: 'radio',
         opts: [
           "A cafe or coffee shop / 咖啡廳",
@@ -578,22 +578,12 @@ const DATA = {
         ]
       },
       {
-        en: "Did you know that 'Alpaca Cafe' changed its name to 'Cool Alpaca'?",
-        zh: "你知道「Alpaca Cafe」已經改名為「Cool Alpaca」嗎？",
+        en: "Which English name best describes '車輪餅' to someone who's never had one?",
+        zh: "哪個英文名稱最能讓沒吃過車輪餅的人一看就懂？",
+        hint: "A round, crispy cake filled with custard, red bean, or other flavors — a classic Taiwanese street snack.\n一種圓形、外酥內軟、現做現填餡的台灣經典小吃。",
         type: 'radio',
         opts: [
-          "Yes, and the new name is better / 知道，新名字比較好",
-          "Yes, but I preferred the old name / 知道，但我比較喜歡舊名",
-          "Yes, but I don't care either way / 知道，但無所謂",
-          "No, I didn't know that / 不知道"
-        ]
-      },
-      {
-        en: "Which name best describes this product to you?",
-        zh: "你覺得哪個名稱最能讓人一看就懂這個產品？",
-        hint: "A round, crispy cake filled with custard, red bean, or other fillings.\n一種圓形、外酥內軟、現做現填餡的台灣經典小吃。",
-        type: 'radio',
-        opts: [
+          "Wheel Pie（目前使用）",
           "Wheel Cake",
           "Taiwanese Stuffed Cake / 台式夾餡餅",
           "Crispy Cream Cake / 酥脆奶油餅",
@@ -620,8 +610,8 @@ const DATA = {
     sub:  "That's the most honest perspective of all. Help us understand what stops you.\n你還沒來過——這正是最誠實的視角。幫我們了解是什麼擋住了你。",
     qs: [
       {
-        en: "When you hear 'Cool Alpaca', which 3 words come to mind first?",
-        zh: "聽到「Cool Alpaca」，你腦中最先浮現哪 3 個詞？",
+        en: "When you hear 'Alpaca Cafe', which 3 words come to mind first?",
+        zh: "聽到「Alpaca Cafe」，你腦中最先浮現哪 3 個詞？",
         type: 'checkbox',
         maxOptions: 3,
         opts: [
@@ -639,7 +629,7 @@ const DATA = {
         ]
       },
       {
-        en: "Honestly, what's been the main friction keeping you from trying Cool Alpaca?",
+        en: "Honestly, what's been the main friction keeping you from trying Alpaca Cafe?",
         zh: "說真的，是什麼主要原因讓你到現在還沒去試過？",
         type: 'radio',
         opts: [
@@ -676,8 +666,8 @@ const DATA = {
         ]
       },
       {
-        en: "When you first heard 'Cool Alpaca' — what did you assume it was?",
-        zh: "你第一次聽到「Cool Alpaca」時，以為是賣什麼的？",
+        en: "When you first heard 'Alpaca Cafe' — what did you assume it was?",
+        zh: "你第一次聽到「Alpaca Cafe」時，以為是賣什麼的？",
         type: 'radio',
         opts: [
           "A cafe or coffee shop / 咖啡廳",
@@ -701,8 +691,8 @@ const DATA = {
         ]
       },
       {
-        en: "How did you first hear about Cool Alpaca?",
-        zh: "你最初是怎麼知道 Cool Alpaca 的？",
+        en: "How did you first hear about Alpaca Cafe?",
+        zh: "你最初是怎麼知道 Alpaca Cafe 的？",
         type: 'radio',
         opts: [
           "Walking past the store / saw signage / 路過看到招牌",
@@ -725,8 +715,8 @@ const DATA = {
         ]
       },
       {
-        en: "If Cool Alpaca had a premium look but prices were ~20% higher — would you try it?",
-        zh: "如果 Cool Alpaca 更精緻但價格貴約 20%，你會想試嗎？",
+        en: "If Alpaca Cafe had a premium look but prices were ~20% higher — would you try it?",
+        zh: "如果 Alpaca Cafe 更精緻但價格貴約 20%，你會想試嗎？",
         type: 'radio',
         opts: [
           "Absolutely — better experience is worth it / 當然——好體驗值得",
@@ -744,8 +734,8 @@ const DATA = {
     sub:  "That's exactly why your perspective is gold. No bias, just gut reaction.\n你從沒聽過我們——正因如此，你的直覺最珍貴。",
     qs: [
       {
-        en: "When you hear 'Cool Alpaca', which 3 words come to mind first?",
-        zh: "聽到「Cool Alpaca」，你腦中最先浮現哪 3 個詞？",
+        en: "When you hear 'Alpaca Cafe', which 3 words come to mind first?",
+        zh: "聽到「Alpaca Cafe」，你腦中最先浮現哪 3 個詞？",
         type: 'checkbox',
         maxOptions: 3,
         opts: [
@@ -763,8 +753,8 @@ const DATA = {
         ]
       },
       {
-        en: "Hearing 'Cool Alpaca' for the first time — what would you guess it sells?",
-        zh: "第一次聽到「Cool Alpaca」——你猜是賣什麼的？",
+        en: "Hearing 'Alpaca Cafe' for the first time — what would you guess it sells?",
+        zh: "第一次聽到「Alpaca Cafe」——你猜是賣什麼的？",
         type: 'radio',
         opts: [
           "A cafe or coffee shop / 咖啡廳",
@@ -861,8 +851,8 @@ const DATA = {
     sub:  '透過選擇與約束，畫出 Rebrand 的絕對邊界。',
     qs: [
       {
-        en: "When you hear 'Cool Alpaca', which 3 words come to mind first?",
-        zh: "聽到「Cool Alpaca」，你腦中最先浮現哪 3 個詞？",
+        en: "When you hear 'Alpaca Cafe', which 3 words come to mind first?",
+        zh: "聽到「Alpaca Cafe」，你腦中最先浮現哪 3 個詞？",
         type: 'checkbox',
         maxOptions: 3,
         opts: [
@@ -880,8 +870,8 @@ const DATA = {
         ]
       },
       {
-        en: "What is the true 'Hero' of the Cool Alpaca brand? (Pick up to 2)",
-        zh: "Cool Alpaca 真正不可取代的主角是什麼？（最多選兩項）",
+        en: "What is the true 'Hero' of the Alpaca Cafe brand? (Pick up to 2)",
+        zh: "Alpaca Cafe 真正不可取代的主角是什麼？（最多選兩項）",
         type: 'checkbox',
         maxOptions: 2,
         opts: [
@@ -900,7 +890,7 @@ const DATA = {
         opts: [
           "The Alpaca character mascot / 草泥馬角色吉祥物",
           "The Cream & Black color palette / 奶油白＋黑色的配色",
-          "The name 'Cool Alpaca' / 「Cool Alpaca」這個名字",
+          "The name 'Alpaca Cafe' / 「Alpaca Cafe」這個名字",
           "The authentic Taiwanese identity / 道地的台灣身份",
           "Approachability — NOT becoming snobby / 親民感——不能變成高冷的店",
           "Other / 其他"
@@ -1266,4 +1256,4 @@ function el(tag, cls, text) {
 }
 </script>
 </body>
-</html><!-- v1776253129 -->
+</html>
