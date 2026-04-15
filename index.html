@@ -591,8 +591,8 @@ const DATA = {
         ]
       },
       {
-        en: "If we reopened with a more premium look, but prices were ~20% higher — would you still visit?",
-        zh: "如果以更精緻的面貌重新開幕，但價格貴約 20%，你還會來嗎？",
+        en: "If we reopened with a more premium look, but prices were ~10-20% higher — would you still visit?",
+        zh: "如果以更精緻的面貌重新開幕，但價格貴約 10-20%，你還會來嗎？",
         type: 'radio',
         opts: [
           "Absolutely — better experience is worth it / 當然——更好的體驗值得",
@@ -708,15 +708,15 @@ const DATA = {
         zh: "哪句標語最讓你想走進一家店？",
         type: 'radio',
         opts: [
-          "\"Wheel Cake, Tea, and You\" / 車輪餅、茶、還有你",
+          "\"Wheel Pie, Tea, and You\" / 車輪餅、茶、還有你",
           "\"A Warm Hug in Every Bite\" / 每一口都是溫暖的擁抱",
           "\"Taiwanese Soul, LA Style\" / 台灣靈魂，LA 風格",
           "\"Handcrafted. Fresh. Fun.\" / 手作、新鮮、有趣"
         ]
       },
       {
-        en: "If Alpaca Cafe had a premium look but prices were ~20% higher — would you try it?",
-        zh: "如果 Alpaca Cafe 更精緻但價格貴約 20%，你會想試嗎？",
+        en: "If Alpaca Cafe had a premium look but prices were ~10-20% higher — would you try it?",
+        zh: "如果 Alpaca Cafe 更精緻但價格貴約 10-20%，你會想試嗎？",
         type: 'radio',
         opts: [
           "Absolutely — better experience is worth it / 當然——好體驗值得",
@@ -770,7 +770,7 @@ const DATA = {
         zh: "哪句標語最讓你想走進一家店？",
         type: 'radio',
         opts: [
-          "\"Wheel Cake, Tea, and You\" / 車輪餅、茶、還有你",
+          "\"Wheel Pie, Tea, and You\" / 車輪餅、茶、還有你",
           "\"A Warm Hug in Every Bite\" / 每一口都是溫暖的擁抱",
           "\"Taiwanese Soul, LA Style\" / 台灣靈魂，LA 風格",
           "\"Handcrafted. Fresh. Fun.\" / 手作、新鮮、有趣"
@@ -1000,7 +1000,7 @@ function render() {
 
   if (q.zh) {
     const qz = el('p', 'q-hint', q.zh);
-    qz.style.fontStyle = 'normal'; qz.style.color = '#aaa8a0'; qz.style.fontSize = '13px'; qz.style.marginBottom = '4px';
+    qz.style.fontStyle = 'normal'; qz.style.color = '#666666'; qz.style.fontSize = '14px'; qz.style.marginBottom = '4px';
     wrap.appendChild(qz);
   }
 
